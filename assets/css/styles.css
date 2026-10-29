@@ -1,0 +1,145 @@
+/* ==========================================================================
+   SWARG - Himalayan Cloud Retreat
+   Custom Stylesheet: Glassmorphism, 3-Tone Palette, Editorial Typography
+   ========================================================================== */
+
+:root {
+  --color-slate-dark: #0f172a;
+  --color-slate-light: #1e293b;
+  --color-mist-silver: #94a3b8;
+  --color-mist-light: #cbd5e1;
+  --color-snow-white: #ffffff;
+  --color-snow-subtle: #f8fafc;
+  --color-silver-glow: rgba(148, 163, 184, 0.25);
+  --color-glass-bg: rgba(15, 23, 42, 0.72);
+  --color-glass-border: rgba(203, 213, 225, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-slate-dark);
+  color: var(--color-snow-white);
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(203, 213, 225, 0.15);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(203, 213, 225, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(148, 163, 184, 0.15);
+}
+
+/* Subtle Silver Border Glow */
+.silver-border-glow {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(148, 163, 184, 0.1);
+}
+
+/* Button Luxury Style */
+.btn-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  color: #0f172a;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.btn-silver:hover {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-silver {
+  background: transparent;
+  color: #f8fafc;
+  border: 1px solid rgba(203, 213, 225, 0.35);
+  transition: all 0.3s ease;
+  letter-spacing: 0.08em;
+}
+
+.btn-ghost-silver:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(203, 213, 225, 0.2);
+}
+
+/* Text Gradients */
+.text-gradient-silver {
+  background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mist {
+  background: linear-gradient(90deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ambient Subtle Fog Animation */
+@keyframes slowDrift {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-10px, -15px); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.animate-hero-bg {
+  animation: slowDrift 28s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Image Hover Zoom */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.06);
+}
